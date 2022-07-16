@@ -36,9 +36,6 @@ client.on('ready', message =>{
 });
 
 client.on('message', message =>{
-  function waruguchi(){
-    
-  }
   if (message.author.id == client.user.id || message.author.bot){
     return;
   }
@@ -46,19 +43,11 @@ client.on('message', message =>{
    sendReply(message, "STOP Mention me...");
    return;
  }
-  if (message.content.match(/stupid|fool|crazy/)){
-    let text = "Shut up";
-    sendMsg(message.channel.id, text);
-    return;
-  }
   else if (message.content.match('Hi')){
     let text = "Hi!"
     sendMsg(message.channel.id, text);
     return;
   }
-  
-  
-  
 });
 
 if(process.env.DISCORD_BOT_TOKEN == undefined){
